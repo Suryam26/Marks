@@ -1,0 +1,54 @@
+#table
+{
+	font-size: 18px;
+	color: black;
+	background-color: #E0E0E0; 
+	border-radius: 10px;
+}
+#h1
+{
+	font-size: 20px; 
+	font-weight: bold;
+}
+#input,#c1,#sub
+{
+	background-color: #FFFFFF;
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	width: 180px;
+	height: 40px;
+	border-radius: 5px;
+	border-color: #FFFFFF;
+	border-style: solid;
+	border-width: 8px;
+	font-weight: normal;
+}
+#sp
+{
+	font-size: 13px;
+	color: red;
+	padding-top: 5px;
+}
+#submit
+{
+	width: 100px;
+	background-color: #2AA8D2;
+	border-color: #2AA8D2;
+	color: #FFFFFF;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	border-style: solid;
+	border-width: 8px;
+	border-radius: 5px;
+	font-weight: normal;
+	height: 40px;
+}
+#submit:hover
+{
+	background-color: #1c728e;
+	border-color: #1c728e;
+}
+#c1,#sub
+{
+	width: 100px;
+}

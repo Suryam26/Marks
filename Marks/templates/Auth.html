@@ -1,0 +1,17 @@
+{% extends 'Successful.html' %}
+
+
+{% block menu %}
+<ul>
+	<li class="login"><a href="{{c}}" onmouseover="this.style.background='#CC0000'" onmouseout="this.style.background='#FFFFFF'">Logout</a></li>
+</ul>
+{% endblock %}
+
+
+{% block content %}
+<center>
+	<div id="out" style="color: red">Unauthorized</div>
+	<div id="eno" >You are an unauthorized teacher</div>
+	<div id="eno" >Please contact the office for any questions</div>
+</center>
+{% endblock %}

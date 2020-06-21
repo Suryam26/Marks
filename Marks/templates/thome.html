@@ -1,0 +1,67 @@
+{% extends 'Base.html' %}
+{% load static %}
+
+
+{% block css %}
+<link href="{% static 'css/home.css' %}" rel="stylesheet" type="text/css" media="all" />
+{% endblock %}
+
+
+{% block menu %}
+<ul>
+	<li class='home'><a href="">Home</a></li>
+	<li class='mark'><a href="{{c}}T/em">Enter Marks</a></li>
+	<li class="login"><a href="{{c}}" onmouseover="this.style.background='#CC0000'" onmouseout="this.style.background='#FFFFFF'">Logout</a></li>
+</ul>
+{% endblock %}
+	
+
+{% block content %}
+<div id="cbox1">
+	<h2>
+		<center>Welcome {{Name}}</center>
+	</h2>
+				
+	<p>
+		{% for i in Details %}
+		<table align="center" cellspacing="30px" name="table" id="table">
+			<tr>
+				<td colspan="2" align="center" id="h1">Details</td>
+			</tr>
+			<tr>
+				<td>Enrollment Number</td>
+				<td>{{i.0}}</td>
+			</tr>
+			<tr>
+				<td>Name</td>
+				<td>{{i.1}}</td>
+			</tr>
+			<tr>
+				<td>Gender</td>
+				<td>{{i.2}}</td>
+			</tr>
+			<tr>
+				<td>Subject</td>
+				<td>{{ Sub }}</td>
+			</tr>
+			<tr>
+				<td>DOB</td>
+				<td>{{i.3}}</td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td>{{i.4}}</td>
+			</tr>
+			<tr>
+				<td>Mobile Number</td>
+				<td>{{i.7}}</td>
+			</tr>
+			<tr>
+				<td>Address</td>
+				<td>{{i.8}}</td>
+			</tr>
+		</table>
+		{% endfor %}
+	</p>
+</div>
+{% endblock %}

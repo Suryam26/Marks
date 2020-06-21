@@ -1,0 +1,81 @@
+{% extends 'Base.html' %}
+{% load static %}
+
+
+{% block css %}
+<link href="{% static 'css/Reg.css' %}" rel="stylesheet" type="text/css" media="all" />
+{% endblock %}
+
+
+{% block js %}
+<script src="{% static 'js/Reg.js' %}"></script>
+{% endblock %}
+
+
+{% block menu %}
+<ul>
+	<li class="register"><a href="{{c}}">LogIn</a></li>
+</ul>
+{% endblock %}
+
+
+{% block content %}
+<center>
+	<h1>Registration</h1>
+	<div id="error">{{ out }}</div>
+</center>
+
+<form method="POST" action="{{c}}signup">
+{% csrf_token %}
+	<table align="center" cellspacing="25px">
+		<tr>
+			<td><label for="a" >User Type</label></td>
+			<td>
+				Student<input type="radio" name="a" id="a" value="S" required>
+				Teacher<input type="radio" name="a" id="a" value="T">
+			</td>
+		</tr>
+		<tr>
+			<td><label for="name">Name</label></td>
+			<td><input type="text" name="name" id="name" placeholder="Enter Name" onblur="Name()" required><div id="sp1"></div></td>
+		</tr>
+		<tr>
+			<td><label for="gender">Gender</label></td>
+			<td>
+				Male<input type="radio" name="gender" id="gender" value="M" required>
+				Female<input type="radio" name="gender" id="gender" value="F">
+				Other<input type="radio" name="gender" id="gender" value="O">
+			</td>
+		</tr>
+		<tr>
+			<td><label for="dob">DOB</label></td>
+			<td><input type="date" name="dob" id="dob" required></td>
+		</tr>
+		<tr>
+			<td><label for="email">Email</label></td>
+			<td><input type="text" name="email" id="email" placeholder="Enter Email" onblur="Email()" required><div id="sp5"></div></td>
+		</tr>
+		<tr>
+			<td><label for="pwd">Password</label></td>
+			<td><input type="password" name="pwd" id="pwd" placeholder="Enter Password" onblur="Pwd()" required><div id="sp3"></div></td>
+		</tr>
+		<tr>
+			<td><label for="cpwd">Confirm Password</label></td>
+			<td><input type="password" name="cpwd" id="cpwd" placeholder="Confirm Password" onblur="Cpwd()" required><div id="sp4"></div></td>
+		</tr>
+		<tr>
+			<td><label for="mobile">Mobile Number</label></td>
+			<td><input type="text" name="mobile" id="mobile" placeholder="Enter Mobile Number" onblur="Mobile()" value="+91-"required><div id="sp6"></div></td>
+		</tr>
+		<tr>
+			<td><label for="add">Address</label></td>
+			<td><textarea type="text" name="add" id="add" placeholder="Enter Address" required onblur="Add()" rows="3" cols="19px"></textarea><div id="sp7"></div></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center" class="submit"><input type="submit" value="Register" onclick="return Submit()" id="submit"><div id="sp8"></div></td>
+		</tr>
+	</table>
+</form>
+{% endblock %}
+
+

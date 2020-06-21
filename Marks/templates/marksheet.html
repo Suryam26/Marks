@@ -1,0 +1,77 @@
+{% extends 'Base.html' %}
+{% load static %}
+
+
+{% block css %}
+<link href="{% static 'css/home.css' %}" rel="stylesheet" type="text/css" media="all" />
+{% endblock %}
+
+
+{% block js %}
+<script src="{% static 'js/Reg.js' %}"></script>
+{% endblock %}
+
+
+{% block menu %}
+<ul>
+	<li class='home'><a href="{{c}}S/home">Home</a></li>
+	<li class='mark'><a href="">Mark Sheet</a></li>
+	<li class="login"><a href="{{c}}" onmouseover="this.style.background='#CC0000'" onmouseout="this.style.background='#FFFFFF'">Logout</a></li>
+</ul>
+{% endblock %}
+
+
+{% block content %}
+<div id="cbox1">
+	<h2>
+		<center>Welcome {{Name}}</center>
+	</h2>
+
+	<p>
+		<form method="POST" action="">
+		{% csrf_token %}
+			{% for i in Sub %}
+			<table align="center" cellspacing="30px" name="table" id="table">
+				<tr>
+					<td colspan="3" align="center" name="h1" id="h1">Mark Sheet</td>
+				</tr>
+				<tr>
+					<td>Year</td>
+					<td>
+						<input list="cyear" name="cyear" id="c1" placeholder="{{ cy }}">
+							<datalist id="cyear">
+							{% for j in years %}
+								<option>{{ j }}</option>
+							{% endfor %}
+							</datalist>
+					</td>
+					<td><input type="submit" value="Fetch" onclick="return Sub()" id="submit"></td>
+				</tr>
+
+				<tr></tr>
+
+				<tr>
+					<td>{{ i.0 }}</td>
+					<td colspan="2" align="right">{{ k.0 }}</td>
+				</tr>
+				<tr>
+					<td>{{ i.1 }}</td>
+					<td colspan="2" align="right">{{ k.1 }}</td>
+				</tr>
+				<tr>
+					<td>{{ i.2 }}</td>
+					<td colspan="2" align="right">{{ k.2 }}</td>
+				</tr>
+
+				<tr></tr>
+
+				<tr style="font-size: 25px;">
+					<td>Percentage</td>
+					<td colspan="2" align="right">{{ P }} %</td>
+				</tr>
+			</table>
+			{% endfor %}
+		</form>
+	</p>
+</div>
+{% endblock %}

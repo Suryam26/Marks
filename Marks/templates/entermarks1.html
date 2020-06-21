@@ -1,0 +1,53 @@
+{% extends 'Base.html' %}
+{% load static %}
+
+
+{% block css %}
+<link href="{% static 'css/home.css' %}" rel="stylesheet" type="text/css" media="all" />
+{% endblock %}
+
+
+{% block js %}
+<script src="{% static 'js/Reg.js' %}"></script>
+{% endblock %}
+
+
+{% block menu %}
+<ul>
+	<li class='home'><a href="{{c}}T/home">Home</a></li>
+	<li class='mark'><a href="">Enter Marks</a></li>
+	<li class="login"><a href="{{c}}" onmouseover="this.style.background='#CC0000'" onmouseout="this.style.background='#FFFFFF'">Logout</a></li>
+</ul>
+{% endblock %}
+	
+
+{% block content %}
+<div id="cbox1">
+	<h2>
+		<center>Welcome {{Name}}</center>
+	</h2>
+				
+	<p>
+		<table align="center" cellspacing="30px" id="table">
+			<tr>
+				<td colspan="2" align="center" id="h1">Enter Marks</td>
+			</tr>
+			<tr>
+				<td>Enrollment Number</td>
+				<td align="right">Marks</td>
+			</tr>
+						
+			{% for i in marks %}
+			<tr>
+				<td align="center">{{ i.0 }}</td>
+				<td align="right">{{ i.1 }} /100</td>
+			</tr>
+			{% endfor %}
+						
+			<tr>
+				<td colspan="2" align="center"><a href="{{c}}T/enter"><input type="submit" value="Update" id="submit"></a></td>
+			</tr>
+		</table>	
+	</p>
+</div>
+{% endblock %}		

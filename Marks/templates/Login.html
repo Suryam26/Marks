@@ -1,0 +1,33 @@
+{% extends 'Register.html' %}
+
+
+{% block menu %}
+<ul>
+	<li class="register"><a href="{{c}}signup">Sign up</a></li>
+</ul>
+{% endblock %}
+
+
+{% block content %}
+<center>
+	<h1>Log In</h1>
+	<div id="error">{{ out }}</div>
+</center>
+
+<form method="POST" action="{{c}}">
+{% csrf_token %}
+	<table align="center" cellspacing="25px" >
+		<tr>
+			<td><label for="user">Enrollment No</label></td>
+			<td><input type="text" name="user" id="user" placeholder="Enter Enrollment No" onblur="User()" required><div id="sp2"></div></td>
+		</tr>
+		<tr>
+			<td><label for="pwd">Password</label></td>
+			<td><input type="password" name="pwd" id="pwd" placeholder="Enter Password" onblur="Pwd()" required><div id="sp3"></div></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center" class="submit"><input type="submit" value="Log In" onclick="return Log()" id="submit"><div id="sp9"></div></td>
+		</tr>
+	</table>
+</form>
+{% endblock %}

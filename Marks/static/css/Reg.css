@@ -1,0 +1,69 @@
+	#name,#user,#email,#pwd,#cpwd,#mobile,#add,#dep,#submit,#dob
+	{
+		background-color: #E0E0E0;
+		font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+		font-size: 16px;
+		width: 250px;
+		height: 40px;
+		border-radius: 5px;
+		border-color: #E0E0E0;
+		border-style: solid;
+		border-width: 8px;
+		font-weight: normal;
+		
+	}
+	#add
+	{
+		height: 80px;
+	}
+	#gender,#a
+	{
+		width: 36px;
+	}
+	#submit
+	{
+		width: 100px;
+		background-color: #2AA8D2;
+		border-color: #2AA8D2;
+		color: #FFFFFF;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 18px;
+	}
+	#submit:hover
+	{
+		background-color: #1c728e;
+		border-color: #1c728e;
+	}
+	h1
+	{
+		font-size: 35px;
+	}
+	#sp1,#sp2,#sp3,#sp4,#sp5,#sp6,#sp7
+	{
+		font-size: 13px;
+		color: red;
+	}
+	#sp8,#sp9
+	{
+		font-size: 20px;
+		color: red;
+		padding-top: 20px;
+	}
+	#out
+	{
+		font-size: 30px;
+		color: green;
+		padding-bottom: 25px;
+		font-weight: bold;
+	}
+	#error
+	{
+		font-size: 25px;
+		color: red;
+		padding-top:10px;
+	}
+	#eno
+	{
+		font-size: 25px;
+		padding-bottom: 5px;
+	}

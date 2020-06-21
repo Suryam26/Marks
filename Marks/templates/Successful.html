@@ -1,0 +1,23 @@
+{% extends 'Base.html' %}
+{% load static %}
+
+
+{% block css %}
+<link href="{% static 'css/Reg.css' %}" rel="stylesheet" type="text/css" media="all" />
+{% endblock %}
+
+
+{% block menu %}
+<ul>
+	<li class="register"><a href="{{c}}">LogIn</a></li>
+</ul>
+{% endblock %}
+
+
+{% block content %}
+<center>
+	<div id="out">{{ out }}</div>
+	<div id="eno">Your <b>Enrollment No</b> is {{ eno }}</div>
+	<div id="eno">Please save this Enrollment Number for future use.</div>
+</center>
+{% endblock %}

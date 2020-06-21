@@ -1,0 +1,18 @@
+{% extends 'Successful.html' %}
+
+
+{% block menu %}
+<ul>
+	<li class='home'><a href="{{c}}S/home">Home</a></li>
+	<li class='mark'><a href="">Mark Sheet</a></li>
+	<li class="login"><a href="{{c}}" onmouseover="this.style.background='#CC0000'" onmouseout="this.style.background='#FFFFFF'">Logout</a></li>
+</ul>
+{% endblock %}
+
+
+{% block content %}
+<center>
+	<div id="out" style="color: red">Year Not Found</div>
+	<div id="eno" >Please enter the Year you are currently studying in .....</div>
+</center>
+{% endblock %}

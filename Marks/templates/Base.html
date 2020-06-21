@@ -1,0 +1,117 @@
+{% load static %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Marks</title>
+	<link href="{% static 'images/logo1.png' %}" rel="icon" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+	<link href="{% static 'css/Default.css' %}" rel="stylesheet" type="text/css" media="all" />
+
+	
+	<style type="text/css">
+		#menu .{{a}} a
+		{
+			color: #FFFFFF;
+			background: #2AA8D2;
+			border-radius: 5px;
+			text-decoration: none;
+		}
+		#me .{{b}} a
+		{
+			color: #FFFFFF;
+			background: #2AA8D2;
+			border-radius: 5px;
+			text-decoration: none;
+		}
+	</style>
+
+	{% block css %}
+	{% endblock %}
+
+
+	{% block js %}
+	{% endblock %}
+
+
+</head>
+
+
+<body>
+
+
+<div id="wrapper" class="container">
+
+
+	<div id="header">
+		{% block header %}
+
+		<div id="logo">
+			<h1><a href="{{c}}">Marks</a></h1>
+			<!-- <p>Your Own Family Restaurant</p> -->
+		</div>
+			
+			<!-- logo ends -->
+
+		<div id="menu">
+			{% block menu %}
+			<ul>
+				<li class='home'><a href="{{c}}">Home</a></li>
+				<li class='about'><a href="{{c}}about">About</a></li>
+				<li class='contact'><a href="{{c}}contact">Contact</a></li>
+				<li class='services'><a href="{{c}}services">Services</a></li>
+				<li class="register"><a href="{{c}}register">Register</a></li>
+				<li class="login"><a href="{{c}}login">Login</a></li>
+			</ul>
+			{% endblock %}
+		</div>
+			
+			<!-- menu ends -->
+
+	</div>
+		{% endblock %}
+		<!-- header ends -->
+
+
+	<div id="page">
+
+		<div id="content">
+
+			{% block content %}
+			<div id="cbox1">
+				<h2><center>Welcome to Marks</center></h2>
+				<p>
+
+						<!-- write here  -->
+
+
+				</p>
+			</div>
+				{% endblock %}
+		</div>
+			
+			<!-- content ends  -->
+		
+	</div>
+	
+
+		<!-- page ends -->
+
+
+	<div id="footer">
+		{% block footer %}
+		<center>
+			<h3>All right reserved &copy; Design by 73, 77 and 79</h3>
+		</center>
+	</div>
+		{% endblock %}
+		<!-- footer ends -->
+
+</div>
+	<!-- Wrapper ends -->
+
+
+</body>
+</html>
